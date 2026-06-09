@@ -1,1 +1,35 @@
-node_modules/\n.env\n*.log\n.DS_Store\ndist/\nbuild/
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build
+.next/
+dist/
+build/
+
+# Environment
+.env
+.env*.local
+
+# Database
+prisma/*.db
+prisma/*.db-journal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+test-results/
+playwright-report/
+
+# Debug
+*.log
+npm-debug.log*
