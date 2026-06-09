@@ -22,12 +22,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         // MVP: accept any email/password combo
         // Production: validate against database
-        if (!credentials?.email || !credentials?.password) return null;
-        if (credentials.password.length < 6) return null;
+        const email = credentials?.email as string | undefined;
+        const password = credentials?.password as string | undefined;
+        if (!email || !password) return null;
+        if (password.length < 6) return null;
         return {
           id: "mvp-user",
-          email: credentials.email as string,
-          name: credentials.email.split("@")[0],
+          email: email,
+          name: email.split("@")[0],
         };
       },
     }),
