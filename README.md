@@ -27,7 +27,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/gubowen20071022/gebow.git
+git clone https://github.com/gubowen20071022/GEBOW.git
 cd gebow
 
 # Install dependencies
